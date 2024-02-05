@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"     rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>MUSCLE BAZAAR</title>
+    <style>
+        body {
+            background-image: linear-gradient(#343638, #847f7e, #343638);
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+        }
+
+        .web-name {
+        font-family: "Creepster", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        background-color: rgba(0, 0, 0, 0.294);
+        color: rgb(171, 180, 44);
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 0px;
+        font-size: 40px;
+        }
+
+        header {
+            background-color: rgba(252, 255, 249, 0.812);
+            font-family: "Roboto Condensed", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            text-align: end;
+            padding: 20px 6px;
+            position: relative;
+            margin-bottom: 10px;
+            margin-right: 0px;
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+        }
+
+        a {
+            color: black;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        
+        .imga {
+            height: 100px;
+            margin: 30px 10px 1px 10px;
+            width: auto;
+           
+        }
+
+        .main-footer {
+            background-color: black;
+            color: whitesmoke;
+           
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0px;
+            padding: 0px 0px;
+            margin-top: 50px;
+        }
+
+        .header-img {
+            height: 15px;
+        }
+        .divbuy-btn{
+            text-align: center;
+        }
+        .buy-btn{
+            background-color: rgb(210, 210, 50);
+            border: none;
+             padding: 15px 20px 15px 20px;
+             text-align: center;
+             margin-left: 10px;
+             margin-right:10px;
+             margin-top: 2px;
+             
+        }
+        *{
+            box-sizing: border-box;
+
+        }
+        .clm{
+            float: left;
+            width: 33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            font-size: 16px;
+            padding-top: 15px;
+        }
+
+        .wel-head{
+            color: rgba(255, 255, 255, 0.693);
+            font-size: 25px;
+            text-align: center;
+            font-family:"Roboto Condensed", sans-serif ;
+            font-weight: 900;
+        }
+        .wel-para1{
+            color: rgba(255, 255, 255, 0.773);
+            line-height: 1.3em;
+            font-size: 15px;
+            text-align: center;
+            font-family:"Roboto Condensed", sans-serif ;
+            padding: 0px 16px 0px 16px;
+        }
+        .wel-para2{
+            color:rgba(255, 255, 255, 0.773) ;
+            font-size: 17px;
+            text-align: center;
+            font-family: "Roboto Condensed", sans-serif;
+            padding: 0px 16px 10px 16px;
+        }
+
+        .search-main-cont{
+           padding: 0px 50px;
+        }
+
+        .search-container {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            padding: 0px 0px 20px 0px;
+        }
+
+        .search-input {
+            padding: 10px 35px 10px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            outline: none;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 22%;
+            cursor: pointer;
+            background-color: rgb(235, 235, 59);
+            padding: 9px;
+            border-radius: 0px 8.5px 8.5px 0px;
+            
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <h1 class="web-name">Muscle Matrix Store</h1>
+
+    <header>
+        <a href="index.html"><img class="header-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAAAXNSR0IArs4c6QAAAbNJREFUSEvt1j9oFUEQx/FPBIVgpYUWSSeCGAQxoBKsRBvBQi1MEbCLYGEnJJaCaJsyKRVBCxFRFOwU/xWmCkQJIYGAhVgIQghEUHflTh7LXd7dvfdI86a7Y+b33ZnZ2d0B22AD28DUFLoX17CAp3UX3gQ6iLc4hj8BfAlP6oDrQnfgGc61QDZxFm+qgutCZzFZIP4TJ/ClCrgO9CZubyH6NVRhFN/agatCL+NhO7FsY51CzLzUqkDP4EXIcmcFaHSJvY0xv8r820GP4AN2VwTmbo9Cf8ebQIcwj/01gbn7XUwXxZZlugfvQx8PNQTmYVcxl2oUQXfhNU52CIzhv0O1zmd74r9cCo3fj3GhC8BcYiNsrtP4mP9IoTO43kVgLvUjZHscy/FHK/RilmUPmP8kFzGSQqseAE0XtYIDKTR+H8a+TPU+hpsSsrg7eJXdRp+wXgRtZSzhYIfQK7hXZWRynz40DvvzpGRxBuN9mlrXytuHdqW8n0tumfgoe5k0712Yx7GCnk6EsXtQZ2TifXgD8QWY2xqOIp6lrTYV/G4lr4vv2eZarQPt8FwoD2/3XOkJ+C9DcUweAs7WUgAAAABJRU5ErkJggg=="/>Home</a>
+        <a href="contact.html"><img class="header-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAAAXNSR0IArs4c6QAAAddJREFUSEvl1s2rTVEcxvHPNVBERCbXLRMDIspMGaA70c1AQhnIW1EYGGLAgK6B7uxKKYpMKcmIMjAwwB9AKXmbmArlbf+0Tp2W/XLss29XWbOz92893/Vb61nPPiNmYYzMAtM/CV2Od13vRlWnc3AJJ3ED+/GzK3gZdAHuYLwPMo3jMwVdikdYWwI4jckuwHmn23G3RvgQrg0LzqHbcL9G9Ad2NCyscU05dAOeNcz6glV43aheUZBD5+NTg1i4eCVedQUNnZdJtEozXBxubj3KrkwY5UCJYnR4BFdb09LEMuhe3MqEAxgBEUEx9KgKh7dY1Kf+rUioCI2vQxOpDPzzOJMBjuHyTEIX40VhmGV9kI9FPK7H+wrwCWzBVBGhj+sWV/dpizO8nk2OhWwuDPUhe362+H0uPYuj2IPbVeCm7+k9TGST3+AgHqTnkckXSgCVx9EEDfM8wZoS0QiHp9hds5UXC/Odyt83QaN+RTqjsZYmimsWO/O9N38QaNSO4mHK3Dbs6Da6/j0GhUbtElzBrhbUfbjZBtqbE8aKO7xxQHi4eGd/7d90mjNW42jK6YUVC3heuHwTPncF7enMxdYUDOswL70I0OGyf5PDdDrg7v5Z9v9AfwHhpkMeiEIdnAAAAABJRU5ErkJggg=="/>Contact Us</a>
+        <a href="about.html"><img class="header-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAAAXNSR0IArs4c6QAAAjJJREFUSEvt1UuozHEUB/DPpTyKKM+kKBYUCzuviFCyErJCLBRKWKDIAiVRLDyTlJ2SJEnIa8PC0iMUO89s5LFA+Z/b+WuaO3dm7sytu3E2M/Ob3znf3/c8vqdDH1hHH2D6D9rTrG/HeOzC70bOzaR3KDYgAk/AL5zBSbzEJDzFIJzG5nZBB+I+ZtYI9B2z8A7XK+4sSJ9usRsxPYEtdV7+GtMxHM8wIlnHWUugw/AF/RukaxUuYxNO5d0pmfqarvWYRkofNaoPjmAnJiOYhy3H1e5864FOxfMmQA9gX9a0fOQS3G4FtF+Rso8Y2QB4Ie4VDbURZ/Pu6KIXPrcCGj4xKufrgN7EUgzJ1I7Nzo0ObqmRSqcY+P0YUBXlCtYjRucSVuT/0VRrC6H42SrT0m8iVmN21vlaRZPtwcEqgJjdRYXPi1rAjea0iT7qvBJpXYltqVBx9iEf+bY6SD3QuZmmaSkAUbfS/mQNg8ktnEOcRfMdyhGKu28wA18rgWuBxtlxbG2WJp5gWaG7n9InVCzULOwwdjcCvYg1PQAsr77KdIaKhd3Izv5RLIdRBfv47LRqplGTYy0Ali53sDh/zMOD/L4OQaYL6OAUg1hl7dh8PMwAIRAhLhdy5ruARk1iRbVrkakdGeRuwbZcdf8EozK9e4uNEjrarj3OPRtxQr/H4Fs2Wxem0WWxLdq19xhXL0gl02iAOe0iJqujzYL2Al5zIXpLBptDqzEyPXJs53KfMP0LGKpcHuXdyK4AAAAASUVORK5CYII="/>About Us</a>
+        <a name="top"></a><br>
+    </header>
+    
+
+    <div class="Welcome">
+        <h4 class="wel-head">Welcome to Muscle Matrix Store - Your Ultimate Fitness Hub!</h4>
+        <p class="wel-para1">
+            Embark on a journey to a healthier, stronger you with Muscle Matrix , your go-to destination for all things fitness. From top-notch workout gear to expert tips for every age group, our site is designed to cater to beginners and fitness enthusiasts alike. Whether you're 12 or 50, we've got you covered! Explore the latest trends in gym equipment, nutrition advice, and workout routines. Join us in making 2024 your year of wellness. Let's build a stronger, fitter community together!
+        </p>
+        <p class="wel-para2">Here you can find the best deals on fitness equipment and accessories.</p>
+    </div>
+
+        <!-- search bar here -->
+
+      <div >
+        <form class="search-container">
+            
+                <input type="text" class="search-input" placeholder="Search...">
+                <div class="search-icon" onclick="performSearch()"> &#128269; 
+                </div>
+            
+        </form>
+    
+        <script>
+            function performSearch() {
+               
+                alert('Search button clicked!');
+            }
+        </script>
+      </div>
+   
+     <!-- First line  -->
+
+
+    <div class="row" >
+        <div class="clm">
+            <img class="imga" src="gym-img1.PNG">
+         </div>
+         <div class="clm">
+            <img class="imga" src="gym-img2.jpg">
+         </div>
+        <div class="clm">
+            <img class="imga" src="gym-img3.PNG" >
+        </div>
+
+        <div class="divbuy-btn">
+        
+                <button class="buy-btn" onclick="buyFunction1()">Buy Here</button>
+        <script>
+    function buyFunction1() {
+        location.replace("https://amzn.eu/d/4L9LUyK");
+    }
+        </script>
+
+                 <button class="buy-btn" onclick="myfuntion2()" >Buy Here</button>
+                <script>
+                    function myfuntion2(){location.replace("https://www.sportswing.in/product/bodyfit-home-gym-set-home-gym-equipment-combo-8-in-1-gym-bench/")}
+                </script>
+                
+            
+            <button class="buy-btn" onclick="myfuntion3()" >Buy Here</button>
+                <script>
+                    function myfuntion3(){location.replace("https://www.indiamart.com/proddetail/6-station-multi-gym-equipment-22202043497.html")}
+                </script>
+        </div>
+    </div>
+     
+    <!-- second line starts here -->
+
+    <div class="row" >
+        <div class="clm">
+            <img class="imga" src="gym-img4.PNG">
+         </div>
+         <div class="clm">
+            <img class="imga" src="gym-img5.jpeg">
+         </div>
+        <div class="clm">
+            <img class="imga" src="gym-img6.PNG" >
+        </div>
+    </div>
+
+    <div class="divbuy-btn">
+        <button class="buy-btn" onclick="myfuntion4()" >Buy Here</button>
+            <script>
+                function myfuntion4(){location.replace("https://www.indiamart.com/proddetail/gym-equipment-exerciser-cycle-26517866412.html")}
+            </script>
+            
+        
+        <button class="buy-btn" onclick="myfuntion5()" >Buy Here</button>
+            <script>
+                function myfuntion5(){location.replace("https://www.isofitness.in/armextensiondhz845-4649564.html")}
+            </script>
+            
+        
+        <button class="buy-btn" onclick="myfuntion6()" >Buy Here</button>
+            <script>
+                function myfuntion6(){location.replace("https://amzn.eu/d/55biUaJ")}
+            </script>
+            
+        </div>
+
+       
+
+        <!-- Third line starts here-->
+
+     
+        <div class="row" >
+            <div class="clm">
+                <img class="imga" src="gym-img7.PNG">
+             </div>
+             <div class="clm">
+                <img class="imga" src="gym-img8.PNG">
+             </div>
+            <div class="clm">
+                <img class="imga" src="gym-img9.PNG" >
+            </div>
+        </div>
+    
+        <div class="divbuy-btn">
+            <button class="buy-btn" onclick="myfuntion7()" >Buy Here</button>
+                <script>
+                    function myfuntion7(){location.replace("https://www.zorexfitness.com/product/zorex-hgz-2001-functional-trainer/")}
+                </script>
+                
+            
+            <button class="buy-btn" onclick="myfuntion8()" >Buy Here</button>
+                <script>
+                    function myfuntion8(){location.replace("https://amzn.eu/d/0gGMbTi")}
+                </script>
+                
+            
+            <button class="buy-btn" onclick="myfuntion9()" >Buy Here</button>
+                <script>
+                    function myfuntion9(){location.replace("https://www.indiamart.com/proddetail/gym-hack-squat-machine-14959691730.html")}
+                </script>
+                
+            </div>
+
+
+       <!-- fourth line starts here -->
+
+       <div class="row" >
+        <div class="clm">
+            <img class="imga" src="gym-img10.PNG">
+         </div>
+         <div class="clm">
+            <img class="imga" src="gym-img11.PNG">
+         </div>
+        <div class="clm">
+            <img class="imga" src="gym-img12.PNG" >
+        </div>
+    </div>
+
+    <div class="divbuy-btn">
+        <button class="buy-btn" onclick="myfuntion10()" >Buy Here</button>
+            <script>
+                function myfuntion10(){location.replace("https://www.indiamart.com/proddetail/full-body-workout-home-gym-machine-2851105378048.html")}
+            </script>
+            
+        
+        <button class="buy-btn" onclick="myfuntion11()" >Buy Here</button>
+            <script>
+                function myfuntion11(){location.replace("https://amzn.eu/d/dNvRy1Z")}
+            </script>
+            
+        
+        <button class="buy-btn" onclick="myfuntion12()" >Buy Here</button>
+            <script>
+                function myfuntion12(){location.replace("https://www.indiamart.com/proddetail/mid-row-machine-20600041812.html")}
+            </script>
+            
+        </div>
+
+
+
+      <!-- Fifth line starts here -->
+
+      <div class="row" >
+        <div class="clm">
+            <img class="imga" src="gym-img13.PNG">
+         </div>
+         <div class="clm">
+            <img class="imga" src="gym-img5.jpeg">
+         </div>
+        <div class="clm">
+            <img class="imga" src="gym-img6.PNG" >
+        </div>
+    </div>
+
+    <div class="divbuy-btn">
+        <button class="buy-btn" onclick="myfuntion13()" >Buy Here</button>
+            <script>
+                function myfuntion13(){location.replace("https://amzn.eu/d/5m2npJm")}
+            </script>
+            
+        
+        <button class="buy-btn" onclick="myfuntion14()" >Buy Here</button>
+            <script>
+                function myfuntion14(){location.replace("https://www.isofitness.in/armextensiondhz845-4649564.html")}
+            </script>
+            
+        
+        <button class="buy-btn" onclick="myfuntion15()" >Buy Here</button>
+            <script>
+                function myfuntion15(){location.replace("https://amzn.eu/d/55biUaJ")}
+            </script>
+            
+        </div>
+
+
+
+
+    <div>
+        <footer class="main-footer">
+           <p> © 2024 Muscle Matrix Store - All rights reserved.</p><br/>
+        </footer>
+    </div>
+
+</body>
+
+</html>

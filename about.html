@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"     rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>MUSCLE BAZAAR</title>
+    <style>
+        body {
+            background-image: linear-gradient(#343638, #847f7e, #343638);
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+        }
+
+        .web-name {
+        font-family: "Creepster", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        background-color: rgba(0, 0, 0, 0.294);
+        color: rgb(171, 180, 44);
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 0px;
+        font-size: 40px;
+        }
+
+        header {
+            background-color: rgba(252, 255, 249, 0.812);
+            font-family: "Roboto Condensed", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            text-align: end;
+            padding: 20px 6px;
+            position: relative;
+            margin-bottom: 10px;
+            margin-right: 0px;
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+        }
+
+        a {
+            color: black;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        .main-footer {
+            background-color: black;
+            color: whitesmoke;
+           
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0px;
+            padding: 0px 0px;
+            margin-top: 50px;
+        }
+
+        .header-img {
+            height: 15px;
+        }
+        
+        *{
+            box-sizing: border-box;
+
+        }
+        
+        p{
+            font-size: 16px;
+            padding-top: 15px;
+        }
+
+        b{
+            display: block;
+            text-align: center;
+            background-color: #343638;
+            padding: 20px;
+        }
+       .head1{
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        padding: 20px;
+        background-color: #343638;
+        color:rgba(232, 245, 245, 0.732);
+    }
+
+    .whole-para{
+        color:rgba(232, 245, 245, 0.732);
+        font-family:"Roboto Condensed", sans-serif ;
+        font-weight: 100 ;
+
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <h1 class="web-name">Muscle Matrix Store</h1>
+
+    <header>
+        <a href="index.html"><img class="header-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAAAXNSR0IArs4c6QAAAbNJREFUSEvt1j9oFUEQx/FPBIVgpYUWSSeCGAQxoBKsRBvBQi1MEbCLYGEnJJaCaJsyKRVBCxFRFOwU/xWmCkQJIYGAhVgIQghEUHflTh7LXd7dvfdI86a7Y+b33ZnZ2d0B22AD28DUFLoX17CAp3UX3gQ6iLc4hj8BfAlP6oDrQnfgGc61QDZxFm+qgutCZzFZIP4TJ/ClCrgO9CZubyH6NVRhFN/agatCL+NhO7FsY51CzLzUqkDP4EXIcmcFaHSJvY0xv8r820GP4AN2VwTmbo9Cf8ebQIcwj/01gbn7XUwXxZZlugfvQx8PNQTmYVcxl2oUQXfhNU52CIzhv0O1zmd74r9cCo3fj3GhC8BcYiNsrtP4mP9IoTO43kVgLvUjZHscy/FHK/RilmUPmP8kFzGSQqseAE0XtYIDKTR+H8a+TPU+hpsSsrg7eJXdRp+wXgRtZSzhYIfQK7hXZWRynz40DvvzpGRxBuN9mlrXytuHdqW8n0tumfgoe5k0712Yx7GCnk6EsXtQZ2TifXgD8QWY2xqOIp6lrTYV/G4lr4vv2eZarQPt8FwoD2/3XOkJ+C9DcUweAs7WUgAAAABJRU5ErkJggg=="/>Home</a>
+        <a href="contact.html"><img class="header-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAAAXNSR0IArs4c6QAAAddJREFUSEvl1s2rTVEcxvHPNVBERCbXLRMDIspMGaA70c1AQhnIW1EYGGLAgK6B7uxKKYpMKcmIMjAwwB9AKXmbmArlbf+0Tp2W/XLss29XWbOz92893/Vb61nPPiNmYYzMAtM/CV2Od13vRlWnc3AJJ3ED+/GzK3gZdAHuYLwPMo3jMwVdikdYWwI4jckuwHmn23G3RvgQrg0LzqHbcL9G9Ad2NCyscU05dAOeNcz6glV43aheUZBD5+NTg1i4eCVedQUNnZdJtEozXBxubj3KrkwY5UCJYnR4BFdb09LEMuhe3MqEAxgBEUEx9KgKh7dY1Kf+rUioCI2vQxOpDPzzOJMBjuHyTEIX40VhmGV9kI9FPK7H+wrwCWzBVBGhj+sWV/dpizO8nk2OhWwuDPUhe362+H0uPYuj2IPbVeCm7+k9TGST3+AgHqTnkckXSgCVx9EEDfM8wZoS0QiHp9hds5UXC/Odyt83QaN+RTqjsZYmimsWO/O9N38QaNSO4mHK3Dbs6Da6/j0GhUbtElzBrhbUfbjZBtqbE8aKO7xxQHi4eGd/7d90mjNW42jK6YUVC3heuHwTPncF7enMxdYUDOswL70I0OGyf5PDdDrg7v5Z9v9AfwHhpkMeiEIdnAAAAABJRU5ErkJggg=="/>Contact Us</a>
+        <a href="about.html"><img class="header-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAAAXNSR0IArs4c6QAAAjJJREFUSEvt1UuozHEUB/DPpTyKKM+kKBYUCzuviFCyErJCLBRKWKDIAiVRLDyTlJ2SJEnIa8PC0iMUO89s5LFA+Z/b+WuaO3dm7sytu3E2M/Ob3znf3/c8vqdDH1hHH2D6D9rTrG/HeOzC70bOzaR3KDYgAk/AL5zBSbzEJDzFIJzG5nZBB+I+ZtYI9B2z8A7XK+4sSJ9usRsxPYEtdV7+GtMxHM8wIlnHWUugw/AF/RukaxUuYxNO5d0pmfqarvWYRkofNaoPjmAnJiOYhy3H1e5864FOxfMmQA9gX9a0fOQS3G4FtF+Rso8Y2QB4Ie4VDbURZ/Pu6KIXPrcCGj4xKufrgN7EUgzJ1I7Nzo0ObqmRSqcY+P0YUBXlCtYjRucSVuT/0VRrC6H42SrT0m8iVmN21vlaRZPtwcEqgJjdRYXPi1rAjea0iT7qvBJpXYltqVBx9iEf+bY6SD3QuZmmaSkAUbfS/mQNg8ktnEOcRfMdyhGKu28wA18rgWuBxtlxbG2WJp5gWaG7n9InVCzULOwwdjcCvYg1PQAsr77KdIaKhd3Izv5RLIdRBfv47LRqplGTYy0Ali53sDh/zMOD/L4OQaYL6OAUg1hl7dh8PMwAIRAhLhdy5ruARk1iRbVrkakdGeRuwbZcdf8EozK9e4uNEjrarj3OPRtxQr/H4Fs2Wxem0WWxLdq19xhXL0gl02iAOe0iJqujzYL2Al5zIXpLBptDqzEyPXJs53KfMP0LGKpcHuXdyK4AAAAASUVORK5CYII="/>About Us</a>
+        <a name="top"></a><br>
+    </header>
+
+    <div class="about-me">
+        <h3 class="head1">
+            Welcome to Muscle Matrix Store! I'm Vedant, the founder and passionate fitness enthusiast behind this endeavor.
+        </h3>
+
+    <div class="whole-para">
+     <b>
+        <h3 class="head2">Crafting Fitness in Code: The Genesis of Muscle Matrix Store</h3>
+
+       <p class="p1">In the realm of web development, my journey with Muscle Matrix Store began as a fusion of academic curiosity and a love for fitness. Inspired by a college project for Web Application Development (WAD), I chose to sculpt a virtual gym haven.</p>
+
+       <p class="p2">On January 31, 2024, the digital dumbbells of Muscle Matrix Store started taking form in HTML and CSS. With each code iteration, the website evolved, mirroring my daily gains not only in the gym but also in the world of coding.</p>
+
+       <p class="p3">Muscle Matrix Store isn't just an e-commerce project; it's a passion project that transcends the screen. It's where my dedication and coding expertise intersect with the world of fitness. As the lines of code shape this virtual gym, I invite you to join the journey – a space where pixels meet pump, and every click is a step closer to a fitter, stronger you.</p>
+
+       <p class="p4">Welcome to Muscle Matrix Store, where we're redefining the digital gym experience one code at a time! 💪🏋️‍♂️</p>
+     </b>
+    </div>
+    </div>
+
+    <div>
+        <footer class="main-footer">
+           <p> © 2024 Muscle Matrix Store - All rights reserved.</p><br/>
+        </footer>
+    </div>
+
+</body>
+
+</html>
